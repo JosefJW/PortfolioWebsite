@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        async function sendMessage(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const formData = new FormData(event.target);
+            const response = await fetch('/submit_form', {
+                method: 'POST',
+                body: formData,
+            });
+
+            const result = await response.json();
+            const statusElement = document.getElementById('status');
+
+            if (result.success) {
+                statusElement.textContent = "Message sent successfully!";
+                statusElement.style.color = "green";
+                event.target.reset(); // Clear the form
+            } else {
+                statusElement.textContent = "Failed to send the message. Please try again.";
+                statusElement.style.color = "red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 style="position: relative; left: 10px;">Josef Wolf</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/skills">Skills</a>
+            <a href="/projects">Projects</a>
+            <a href="/education">Education</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div style="display: flex; flex-direction: row">
+            <img src="/../static/pictures/bridge.jpg" style="margin-top: 5vw; width: 50vw; height: 35vw; clip-path: inset(0 10% 0 10%);"/>
+            <div>
+                <h1>Josef Wolf</h1>
+                <form action="/submit_form" method="POST" style="max-width: 400px; margin: auto;" onsubmit="sendMessage(event)">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-bottom: 10px;">
+                
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px; margin-bottom: 10px;"></textarea>
+                
+                    <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Send</button>
+                </form>
+                <p id="status"></p>
+            </div>
+        </div>
+    </main>
+    <footer style="margin-left: -10vw; margin-right: -10vw;">
+        <div class="footer-container">
+            <!-- Footer Sections Links -->
+            <div class="footer-sections">
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                <a href="/skills">Skills</a>
+                <a href="/projects">Projects</a>
+                <a href="/education">Education</a>
+                <a href="/contact">Contact</a>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <a href="https://www.linkedin.com/in/josef-j-wolf" target="_blank">LinkedIn</a>
+            </div>
+            
+            <!-- Name -->
+            <div class="name">
+                <p>Josef Wolf</p>
+            </div>
+            
+            <!-- Thank You Message -->
+            <div class="thank-you">
+                <p>Thank you for visiting my website!</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

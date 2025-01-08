@@ -1,0 +1,119 @@
+<style>
+    body {
+        height: 100vh;
+        width: 100vw;
+        background-color: darkgray;
+        margin: 0rem;
+        overflow: hidden;
+    }
+
+    #track > .image {
+        width: 40vmin;
+        height: 56vmin;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .image:hover {
+        transform: scale(1.2)
+    }
+
+    #track {
+        display: flex;
+        gap: 4vmin;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(0%, -50%)
+    }
+</style>
+
+<script>
+    let mouseDownAt = 0;
+    let prevPercentage = 0;
+    let percentage = 0;
+    let nextPercentage = 0;
+
+    window.onmousedown = e => {
+        mouseDownAt = e.clientX;
+    }
+
+    window.onmouseup = () => {
+        mouseDownAt = 0;
+        prevPercentage = nextPercentage;
+    }
+
+    window.onmousemove = e => {
+        if (mouseDownAt === 0) return;
+
+        let mouseDelta = mouseDownAt - e.clientX;
+        const maxDelta = window.innerWidth/2;
+
+        percentage = (mouseDelta / maxDelta) * -100;
+        nextPercentage = prevPercentage + percentage;
+
+        if (nextPercentage > 0) {
+            nextPercentage = 0;
+        }
+        else if (nextPercentage < -100) {
+            nextPercentage = -100;
+        }
+
+        track.animate({
+            transform: `translate(${nextPercentage}%, -50%)`
+        }, { duration: 1200, fill: "forwards"});
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.getElementById('track');
+
+        for (let image of track.getElementsByClassName("image")) {
+            image.addEventListener('click', function() {
+                if (this.id === "img1") { window.location.href = '/' }
+                else if (this.id === "img2") { window.location.href = '/about' }
+                else if (this.id === "img3") { window.location.href = '/skills' }
+                else if (this.id === "img4") { window.location.href = '/projects' }
+                else if (this.id === "img1") { window.location.href = '/education' }
+                else if (this.id === "img1") { window.location.href = '/contact' }
+            });
+        }
+    });
+</script>
+
+<body>
+    <p id="debug" style="color: white"></p>
+    <div id="track" data-mouse-down-at="0" data-prev-percentage="0">
+        <img id="img1" class="image" title="Home" src="../static/pictures/bridge.jpg" draggable="false" style="user-select: none;" />
+        <img id="img2" class="image" title="About Me" src="../static/pictures/lean.jpg" draggable="false" style="user-select: none;" />
+        <img id="img3" class="image" title="Skills" src="../static/pictures/thinker.jpg" draggable="false" style="user-select: none;" />
+    </div>
+</body>
+<footer style="margin-left: -10vw; margin-right: -10vw;">
+    <div class="footer-container">
+        <!-- Footer Sections Links -->
+        <div class="footer-sections">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/skills">Skills</a>
+            <a href="/projects">Projects</a>
+            <a href="/education">Education</a>
+            <a href="/contact">Contact</a>
+        </div>
+        
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <a href="https://www.linkedin.com/in/josef-j-wolf" target="_blank">LinkedIn</a>
+        </div>
+        
+        <!-- Name -->
+        <div class="name">
+            <p>Josef Wolf</p>
+        </div>
+        
+        <!-- Thank You Message -->
+        <div class="thank-you">
+            <p>Thank you for visiting my website!</p>
+        </div>
+    </div>
+</footer>  
