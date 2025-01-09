@@ -1,0 +1,29 @@
+body {
+    background-color: #dddddd;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 5vw;
+    margin-top: 200px;
+}
+
+.icon {
+    text-align: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: rgb(170, 170, 170);
+    border-width: 5px;
+    background-color: white;
+    width: 15vw;
+    height: 10vh;
+    font-size: 3vmin;
+    border-radius: 25px;
+    color: blue;
+    cursor: pointer;
+}
+
+  
