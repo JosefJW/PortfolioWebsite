@@ -268,7 +268,7 @@ for (let i = 0; i < text_options.length; i++) {
     for (let j = 0; j < i; j++) {
         wait += text_options[j].length
     }
-    wait = wait*30+i*5000
+    wait = wait*30+i*5000+3000
     console.log(wait);
 
     setTimeout(function() {

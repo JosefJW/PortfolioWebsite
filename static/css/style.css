@@ -133,13 +133,67 @@ main {
 #code-container {
     background-color: #222222;
     margin: -20px;
-    width: 150%;
+    width: auto;
     position: relative;
     padding: 10px;
     min-height: calc(100vh - 200px - 100px);
     color: white;
     white-space: pre-wrap;
     font-size: 20px;
+    filter: contrast(120%) brightness(90%) grayscale(30%) saturate(150%) blur(1px);
+    box-shadow: inset 0 0 10px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.6); /* Neon green glow */
+    border-radius: 10px; 
+    overflow: hidden;
+    position: relative;
+    transform-origin: center;
+    opacity: 0;
+    animation: turnOn 3s forwards, flicker 5s infinite;
+}
+
+@keyframes turnOn {
+    0% {
+        opacity: 0; /* Fully black */
+        clip-path: inset(50% 50% 50% 50%); /* Start from the center */
+    }
+    50% {
+        opacity: 0.8;
+        clip-path: inset(0% 25% 0% 25%); /* Widen from the center */
+    }
+    100% {
+        opacity: 1;
+        clip-path: inset(0% 0% 0% 0%); /* Fully expanded */
+    }
+}
+
+#code-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        rgba(0, 0, 0, 0.2) 0, 
+        rgba(0, 0, 0, 0.2) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+}
+
+@keyframes flicker {
+    0% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 500px) {
