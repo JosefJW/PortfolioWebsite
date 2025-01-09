@@ -1,214 +1,228 @@
-#draggable1 {
-    position: absolute;
-    z-index: 9;
-    background: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 300px;
-    width: 400px;
-    min-height: 200px;
-    height: 200px;
-    top: 10vh;
-    left: 15vw;
-    opacity: 1;
-    overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: openWindow 0.8s ease-out both;
-}
+@media (pointer: fine) and (min-width: 800px) {
+    #draggable1 {
+        position: absolute;
+        z-index: 9;
+        background: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        min-width: 300px;
+        width: 400px;
+        min-height: 200px;
+        height: 200px;
+        top: 10vh;
+        left: 15vw;
+        opacity: 1;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation: openWindow 0.8s ease-out both;
+    }
 
-#draggable2 {
-    position: absolute;
-    z-index: 9;
-    background: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 300px;
-    width: 400px;
-    min-height: 200px;
-    height: 400px;
-    top: 25vh;
-    left: 70vw;
-    opacity: 1;
-    overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: openWindow2 0.8s ease-out both;
-}
+    #draggable2 {
+        position: absolute;
+        z-index: 9;
+        background: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        min-width: 300px;
+        width: 400px;
+        min-height: 200px;
+        height: 400px;
+        top: 25vh;
+        left: 70vw;
+        opacity: 1;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation: openWindow2 0.8s ease-out both;
+    }
 
-#draggable3 {
-    position: absolute;
-    z-index: 9;
-    background: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 300px;
-    width: 400px;
-    min-height: 200px;
-    height: 400px;
-    top: 40vh;
-    left: 5vw;
-    opacity: 1;
-    overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: openWindow3 0.8s ease-out both;
-}
+    #draggable3 {
+        position: absolute;
+        z-index: 9;
+        background: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        min-width: 300px;
+        width: 400px;
+        min-height: 200px;
+        height: 400px;
+        top: 40vh;
+        left: 5vw;
+        opacity: 1;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation: openWindow3 0.8s ease-out both;
+    }
 
-#draggable4 {
-    position: absolute;
-    z-index: 9;
-    background: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 300px;
-    width: 400px;
-    min-height: 200px;
-    height: 200px;
-    top: 70vh;
-    left: 55vw;
-    opacity: 1;
-    overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: openWindow4 0.8s ease-out both;
-}
+    #draggable4 {
+        position: absolute;
+        z-index: 9;
+        background: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        min-width: 300px;
+        width: 400px;
+        min-height: 200px;
+        height: 200px;
+        top: 70vh;
+        left: 55vw;
+        opacity: 1;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation: openWindow4 0.8s ease-out both;
+    }
 
-#draggable5 {
-    position: absolute;
-    z-index: 9;
-    background: #f2f2f2;
-    border: 1px solid #ccc;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-width: 300px;
-    width: 685px;
-    min-height: 200px;
-    height: 1065px;
-    top: 0;
-    left: calc(50% - 685px / 2);
-    opacity: 1;
-    overflow: hidden;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    animation: openWindow5 0.8s ease-out both;
-}
+    #draggable5 {
+        position: absolute;
+        z-index: 9;
+        background: #f2f2f2;
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        min-width: 300px;
+        width: 685px;
+        min-height: 200px;
+        height: 1065px;
+        top: 0;
+        left: calc(50% - 685px / 2);
+        opacity: 1;
+        overflow: hidden;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation: openWindow5 0.8s ease-out both;
+    }
+    
+    @keyframes openWindow {
+        0% {
+        height: 0;
+        min-width: 0;
+        width: 0;
+        top: calc(100vh - 30px);
+        opacity: 0;
+        }
+        90% {
+        height: 200px;
+        min-width: 300px;
+        width: 400px;
+        top: 10vh;
+        left: 15vw;
+        opacity: 1;
+        }
+    }
+
+    @keyframes openWindow2 {
+        0% {
+        height: 0;
+        min-width: 0;
+        width: 0;
+        top: calc(100vh - 30px);
+        opacity: 0;
+        }
+        90% {
+        height: 400px;
+        min-width: 300px;
+        width: 400px;
+        top: 25vh;;
+        left: 70vw;
+        opacity: 1;
+        }
+    }
+
+    @keyframes openWindow3 {
+        0% {
+        height: 0;
+        min-width: 0;
+        width: 0;
+        top: calc(100vh - 30px);
+        opacity: 0;
+        }
+        90% {
+        height: 400px;
+        min-width: 300px;
+        width: 400px;
+        top: 40vh;;
+        left: 5vw;
+        opacity: 1;
+        }
+    }
+
+    @keyframes openWindow4 {
+        0% {
+        height: 0;
+        min-width: 0;
+        width: 0;
+        top: calc(100vh - 30px);
+        opacity: 0;
+        }
+        90% {
+        height: 200px;
+        min-width: 300px;
+        width: 400px;
+        top: 70vh;
+        left: 55vw;
+        opacity: 1;
+        }
+    }
+
+    @keyframes openWindow5 {
+        0% {
+        height: 0;
+        min-width: 0;
+        width: 0;
+        top: calc(100vh - 30px);
+        opacity: 0;
+        }
+        90% {
+        height: 1065px;
+        min-width: 300px;
+        width: 685px;
+        top: 0;
+        left: calc(50% - 685px / 2);
+        opacity: 1;
+        }
+    }
   
-@keyframes openWindow {
-    0% {
-      height: 0;
-      min-width: 0;
-      width: 0;
-      top: calc(100vh - 30px);
-      opacity: 0;
+    .draggableheader {
+        padding: 10px;
+        cursor: move;
+        background: linear-gradient(145deg, #4a90e2, #2a5d8e);
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     }
-    90% {
-      height: 200px;
-      min-width: 300px;
-      width: 400px;
-      top: 10vh;
-      left: 15vw;
-      opacity: 1;
+    
+    .draggable p, h2, h3, h4, h5, h6 {
+        margin: 10px;
+        font-size: 14px;
+        color: #333;
     }
-}
-
-@keyframes openWindow2 {
-    0% {
-      height: 0;
-      min-width: 0;
-      width: 0;
-      top: calc(100vh - 30px);
-      opacity: 0;
-    }
-    90% {
-      height: 400px;
-      min-width: 300px;
-      width: 400px;
-      top: 25vh;;
-      left: 70vw;
-      opacity: 1;
+    
+    .resize-handle {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background-color: #2196F3;
+        bottom: 0;
+        right: 0;
+        cursor: se-resize; /* Cursor for bottom-right resize */
     }
 }
 
-@keyframes openWindow3 {
-    0% {
-      height: 0;
-      min-width: 0;
-      width: 0;
-      top: calc(100vh - 30px);
-      opacity: 0;
-    }
-    90% {
-      height: 400px;
-      min-width: 300px;
-      width: 400px;
-      top: 40vh;;
-      left: 5vw;
-      opacity: 1;
-    }
-}
 
-@keyframes openWindow4 {
-    0% {
-      height: 0;
-      min-width: 0;
-      width: 0;
-      top: calc(100vh - 30px);
-      opacity: 0;
-    }
-    90% {
-      height: 200px;
-      min-width: 300px;
-      width: 400px;
-      top: 70vh;
-      left: 55vw;
-      opacity: 1;
-    }
-}
-
-@keyframes openWindow5 {
-    0% {
-      height: 0;
-      min-width: 0;
-      width: 0;
-      top: calc(100vh - 30px);
-      opacity: 0;
-    }
-    90% {
-      height: 1065px;
-      min-width: 300px;
-      width: 685px;
-      top: 0;
-      left: calc(50% - 685px / 2);
-      opacity: 1;
-    }
-}
-  
 .draggableheader {
     padding: 10px;
-    cursor: move;
     background: linear-gradient(145deg, #4a90e2, #2a5d8e);
     color: white;
     font-size: 16px;
     font-weight: bold;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-  }
-  
-.draggable p, h2, h3, h4, h5, h6 {
-    margin: 10px;
-    font-size: 14px;
-    color: #333;
 }
-  
-.resize-handle {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    background-color: #2196F3;
-    bottom: 0;
-    right: 0;
-    cursor: se-resize; /* Cursor for bottom-right resize */
-}
+
 
 .skills-container {
     flex-grow: 1;
