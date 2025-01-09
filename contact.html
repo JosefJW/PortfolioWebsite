@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/contact.css">
     <script>
         async function sendMessage(event) {
             event.preventDefault(); // Prevent default form submission
@@ -33,18 +34,33 @@
     <header>
         <h1 style="position: relative; left: 10px;">Josef Wolf</h1>
         <nav>
-            <a href="/">Home</a>
-            <a href="/about">About</a>
-            <a href="/projects">Projects</a>
-            <a href="/education">Education</a>
-            <a href="/contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="education.html">Education</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
     <main>
-        <div style="display: flex; flex-direction: row">
-            <img src="/../static/pictures/bridge.jpg" style="margin-top: 5vh; width: 40vw; height: 28vw; clip-path: inset(0 10% 0 10%);"/>
-            <div>
-                <!--<h1>Josef Wolf</h1>-->
+        <div style="display: flex; flex-direction: row; align-content: center; align-items: center">
+            <img src="static/pictures/bridge.jpg" style="margin-top: 5vh; width: 40vw; height: 28vw; clip-path: inset(0 10% 0 10%);"/>
+            <div style="width: 100%; align-content: center;">
+                <h1>Contact Me Here:</h1>
+                <div class="contact-method" style="display: flex; align-items: center;">
+                    <h3>Email:</h3>
+                    <a href="mailto:josefwolf591@gmail.com">josefwolf591@gmail.com</a>
+                    <p>Quickest response</p>
+                </div>
+                <br>
+                <div class="contact-method" style="display:flex">
+                    <h3>LinkedIn:</h3>
+                    <a href="https://www.linkedin.com/in/josef-j-wolf">linkedin.com/in/josef-j-wolf</a>
+                </div>
+                <br>
+                <div class=""
+            </div>
+            <!--<div>
+                <h1>Josef Wolf</h1>
                 <form action="/submit_form" method="POST" style="max-width: 400px; margin: auto; margin-top: 5vh;" onsubmit="sendMessage(event)">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required style="width: auto; padding: 8px; margin-bottom: 10px;">
@@ -55,21 +71,21 @@
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required style="width: 50vw; height: 30vh; padding: 8px; margin-bottom: 10px;"></textarea>
                 
-                    <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer;">Send</button>
+                    <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Send</button>
                 </form>
                 <p id="status"></p>
-            </div>
+            </div>-->
         </div>
     </main>
     <footer style="margin-left: -10vw; margin-right: -10vw;">
         <div class="footer-container">
             <!-- Footer Sections Links -->
             <div class="footer-sections">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/projects">Projects</a>
-                <a href="/education">Education</a>
-                <a href="/contact">Contact</a>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="education.html">Education</a>
+                <a href="contact.html">Contact</a>
             </div>
             
             <!-- Contact Information -->
@@ -78,7 +94,7 @@
                 <a href="https://github.com/JosefJW" target="_blank">Github</a>
             </div>
 
-            <a id="inspire" href="/inspire">Free Inspiration!</a>
+            <a id="inspire" href="inspire.html">Free Inspiration!</a>
             
             <!-- Name -->
             <div class="name">

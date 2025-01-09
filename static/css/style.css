@@ -29,6 +29,7 @@ nav a {
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
+    transition: color 0.3s;
 }
 
 nav a:hover {
@@ -154,9 +155,11 @@ main {
 textarea {
     background-color: rgb(145, 145, 145);
     border-color: rgb(140, 140, 140);
+    border-radius: 5px
 }
 
 input {
     background-color: rgb(145, 145, 145);
     border-color: rgb(140, 140, 140);
+    border-radius: 5px;
 }
