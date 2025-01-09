@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="../static/css/style.css"/>
+    <link rel="stylesheet" href="/static/css/style.css">
 </head>
 <body>
     <header>
@@ -18,7 +18,14 @@
         </nav>
     </header>
     <main>
-        <div id="code-container">def add(self, num1, num2):\n\treturn num1+num2\n</div>
+        <div style="display: flex; align-items:top; background-color: #ffb53e; margin-bottom: 20px; margin-left: -10vw; margin-right: -10vw; overflow: hidden;">
+            <img src="/../static/pictures/thinker.jpg" style="transform: scale(0.8); margin-left: -25vw; margin-top: -35vw; margin-bottom: -40vw; width: 100vw; clip-path: inset(0 0 30% 0); clip-path: circle(35vw at 45vw 70vw); object-fit: cover;"/>
+            <div style="display: flex; flex-direction: column">    
+                <p style="transform: scale(0.8); font-family: 'Montserrat'; font-size: 10vw; margin-bottom: -10vw; position: relative; left: -15vw;" class="flashy">Think.</p>
+                <p style="transform: scale(0.8); font-family: 'Montserrat'; font-size: 10vw; margin-bottom: -10vw; position: relative; left: -15vw;" class="flashy">Create.</p>
+                <p style="transform: scale(0.8); font-family: 'Montserrat'; font-size: 10vw; margin-bottom: -50vw; position: relative; left: -15vw;" class="flashy">Do.</p>
+            </div>
+        </div>
     </main>
     <footer style="margin-left: -10vw; margin-right: -10vw;">
         <div class="footer-container">
@@ -37,7 +44,7 @@
                 <a href="https://github.com/JosefJW" target="_blank">Github</a>
             </div>
 
-            <a id="inspire" href="/inspire">Free Inspiration!</a>
+            <p style="line-height: 15px;">Hope you are now inspired!</p>
             
             <!-- Name -->
             <div class="name">
@@ -49,7 +56,6 @@
                 <p>Thank you for visiting my website!</p>
             </div>
         </div>
-    </footer>
-    <script src="../static/js/home.js"></script>
+    </footer>        
 </body>
 </html>

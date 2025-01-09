@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+main {
+    padding: 20px;
+}
+
+#education {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+.toggleable {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 1.5em;
+    /*background: #007BFF;*/
+    background: #016d5b;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, font-size 0.3s;
+}
+
+.toggleable:hover {
+    /*background: #0056b3*/
+    background: #01493d;
+    font-size: 1.7em;
+}
+
+.semesters, .courses, .open {
+    padding: 0 15px;
+    height: 0;
+    overflow: hidden;
+    background: #222222;
+    transition: height 0.3s ease, padding 0.3s ease;
+    color: rgb(247, 238, 221);
+}
+

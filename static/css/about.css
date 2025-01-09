@@ -1,0 +1,112 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+#intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-content {
+    max-width: 800px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.intro-content h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #55CBCD;
+}
+
+.typing-text {
+    font-size: 1.5rem;
+    font-family: 'Roboto', sans-serif;
+    color: #ddd;
+}
+
+#blurb {
+    padding: 50px;
+    text-align: center;
+    background: #333;
+}
+
+#skills {
+    padding: 50px;
+    text-align: center;
+}
+
+#skills h2 {
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+marquee {
+    scroll-margin: 0;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    /*gap: 20px;*/
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: #444;
+    padding: 20px;
+    width: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+    display: inline-block;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.skill-card:hover {
+    transform: scale(1.1);
+    background: #55CBCD;
+}
+
+#contact {
+    background: #333;
+    padding: 50px;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.email-link {
+    color: #55CBCD;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.email-link:hover {
+    color: #fff;
+}
+
+/* Animations */
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}

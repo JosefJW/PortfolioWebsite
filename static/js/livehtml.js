@@ -5,9 +5,6 @@ const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
   lineNumbers: true,
   autoCloseBrackets: true,
   matchBrackets: true,
-  extraKeys: {
-      "Ctrl-Space": "autocomplete"
-  }
 });
 
 // Function to update the live preview

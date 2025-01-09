@@ -31,6 +31,10 @@ def education():
 def contact():
     return render_template("contact.html", title="Contact")
 
+@app.route("/inspire")
+def inspire():
+    return render_template("inspiration.html", title="Inspiration")
+
 @app.route('/submit_form', methods=['POST'])
 def submit_form():
     try:
@@ -56,4 +60,5 @@ def submit_form():
         return jsonify({'success': False})
 
 if __name__ == "__main__":
+    #app.run(host='0.0.0.0', port=5000)
     app.run(debug=True)

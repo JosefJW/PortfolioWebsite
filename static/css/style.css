@@ -10,12 +10,15 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background-color: #222222;
+    color: rgb(247, 238, 221)
 }
 
 header {
     background: #333;
     color: #fff;
     padding: 10px 20px;
+    z-index: 10;
 }
 
 header h1 {
@@ -33,7 +36,7 @@ nav a:hover {
 }
 
 main {
-    min-height: calc(100vh - 150px - 134px);
+    min-height: calc(100vh - 200px - 134px);
 }
 
 footer {
@@ -41,8 +44,9 @@ footer {
     color: #fff;
     margin: 0;
     padding: 0px;
-    height: 150px;
+    height: 200px;
     text-align: center;
+    z-index: 10;
 }
 
 .footer-container {
@@ -50,6 +54,11 @@ footer {
     flex-direction: column;
     width: 100%;
     margin: 0 auto;
+}
+
+.footer-sections {
+    margin-top: 10px;
+    word-spacing: 50px;
 }
 
 .footer-sections a {
@@ -62,11 +71,23 @@ footer {
     color: gold
 }
 
+.contact-info {
+    word-spacing: 10px;
+}
+
 .contact-info a {
     color: lightblue;
 }
 
 .contact-info a:hover {
+    color: teal;
+}
+
+#inspire {
+    color: lightblue;
+}
+
+#inspire:hover {
     color: teal;
 }
 
@@ -106,4 +127,36 @@ main {
     50% { transform: translateY(5px); }
     75% { transform: translateY(-5px); }
     100% { transform: translateY(0); }
+}
+
+#code-container {
+    background-color: #222222;
+    margin: -20px;
+    width: 150%;
+    position: relative;
+    padding: 10px;
+    min-height: calc(100vh - 200px - 100px);
+    color: white;
+    white-space: pre-wrap;
+    font-size: 20px;
+}
+
+@media (max-width: 500px) {
+    .footer-sections {
+        word-spacing: 5vw;
+    }
+
+    #code-container {
+        font-size: 5px;
+    }
+}
+
+textarea {
+    background-color: rgb(145, 145, 145);
+    border-color: rgb(140, 140, 140);
+}
+
+input {
+    background-color: rgb(145, 145, 145);
+    border-color: rgb(140, 140, 140);
 }

@@ -1,9 +1,8 @@
-/* style.css */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  /*background-color: #f4f4f4;*/
 }
 
 main {
@@ -17,9 +16,6 @@ main {
 
 .project {
   margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background: #fff;
   overflow: hidden;
 }
 
@@ -27,30 +23,53 @@ main {
   margin: 0;
   padding: 15px;
   font-size: 1.5em;
-  background: #007BFF;
+  background: #016d5b;
+  border-radius: 10px;
   color: #fff;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background 0.3s, font-size 0.3s;
 }
 
 .project-title:hover {
-  background: #0056b3;
+  background: #01493d;
+  font-size: 1.6em;
 }
 
 .project-details {
   padding: 0 15px;
   height: 0; /* Start hidden */
   overflow: hidden; /* Prevent content from spilling out */
-  background: #f9f9f9;
+  background: #222222;
   transition: height 0.3s ease, padding 0.3s ease;
+  color: rgb(247, 238, 221);
+}
+
+a {
+  color: #4fff6c;
+}
+
+a:hover {
+  color: #2db343;
 }
 
 .subtitle {
   font-size: 0.8em; /* Make it smaller */
-  color: lightgray; /* Optional: lighter color to distinguish */
+  color: lightgray;
   margin-left: 10px; /* Add some space between the main title and subtitle */
 }
 
 .difficulty {
-  color: darkgray;
+  font-size: 0.8em;
+}
+
+.advanced {
+  color: rgb(177, 21, 47);
+}
+
+.intermediate {
+  color: yellow;
+}
+
+.simple {
+  color: rgb(31, 66, 8);
 }
