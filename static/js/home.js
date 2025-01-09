@@ -58,12 +58,12 @@ function color_text() {
 
     re = /[\s|^>]"(https:\/\/www\.linkedin\.com\/in\/josef-j-wolf\/)"[^<]/g
     changes = changes.replaceAll(re, (match, captureGroup1) => {
-        return ` "<a href="https:www.linkedin.com/in/josef-j-wolf" style="color: #ABDEE6" target="_blank">${captureGroup1}</a>",`;
+        return ` "<a href="https://www.linkedin.com/in/josef-j-wolf" style="color: #ABDEE6" target="_blank">${captureGroup1}</a>",`;
     })
 
     re = /[\s|^>]"(https:\/\/github\.com\/JosefJW)"[^<]/g
     changes = changes.replaceAll(re, (match, captureGroup1) => {
-        return ` "<a href="https:github.com/JosefJW" style="color: #ABDEE6" target="_blank">${captureGroup1}</a>"`;
+        return ` "<a href="https://github.com/JosefJW" style="color: #ABDEE6" target="_blank">${captureGroup1}</a>"`;
     })
 
     re = /[^>](self)/g
