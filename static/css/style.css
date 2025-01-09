@@ -200,10 +200,6 @@ main {
     .footer-sections {
         word-spacing: 5vw;
     }
-
-    #code-container {
-        font-size: 5px;
-    }
 }
 
 textarea {
