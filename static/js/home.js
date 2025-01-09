@@ -6,7 +6,7 @@ function type_text(text, wait) {
     console.log(wait);
     setTimeout(function() {
         code_container.innerHTML = "|";
-    }, text_chars*30+wait);
+    }, text_chars*100+wait);
     for (let word of text.split(" ")) {
         for (let i = 0; i < word.length; i++) {
             setTimeout(function() {
@@ -14,7 +14,7 @@ function type_text(text, wait) {
                 code_container.innerHTML += word.charAt(i);
                 color_text();
                 code_container.innerHTML += "|";
-            }, text_chars*30+wait);
+            }, text_chars*100+wait);
             text_chars++;
         }
         setTimeout(function() {
@@ -22,7 +22,7 @@ function type_text(text, wait) {
             code_container.innerHTML += " ";
             color_text();
             code_container.innerHTML += "|";
-        }, text_chars*30+wait);
+        }, text_chars*100+wait);
         text_chars++;
     }
     color_text();
@@ -268,7 +268,7 @@ for (let i = 0; i < text_options.length; i++) {
     for (let j = 0; j < i; j++) {
         wait += text_options[j].length
     }
-    wait = wait*30+i*5000+3000
+    wait = wait*60+i*5000+3000
     console.log(wait);
 
     setTimeout(function() {
