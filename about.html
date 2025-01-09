@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="static/css/about.css">
+    <link rel="stylesheet" href="static/css/draggable.css">
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
@@ -20,46 +20,52 @@
     </header>
 
     <main>
-        <section id="intro">
-            <div class="intro-content">
-                <h2>Hey, I'm Josef Wolf!</h2>
-                <p class="typing-text"></p>
-            </div>
-        </section>
+        <div class="draggable" id="draggable5">
+            <div class="draggableheader">Image</div>
+            <h5><img src="static/pictures/lean.jpg"/></h5>
+            <div class="resize-handle"></div>
+        </div>
 
-        <section id="blurb">
-            <h2>About Me</h2>
+        <div class="draggable" id="draggable1">
+            <div class="draggableheader">Me</div>
+                <h2>Hey, I'm Josef Wolf!</h2>
+                <p>I am passionate about coding, learning new technologies, and building amazing things!</p>
+        </div>
+
+        <div class="draggable" id="draggable2">
+            <div class="draggableheader">About Me</div>
             <p>I am currently a sophomore at UW-Madison majoring in computer science, data science, and mathematics. I am expected to graduate in the winter of 2026. I am passionate about machine learning, software engineering, and creating new tools, and I am excited to explore how I can apply my skills to solve real-world problems!</p>
             <p>During college, I have been gaining experience with Python, Java, C, and R. I have used tools within these such as PyTorch, Flask, and SKLearn.</p>
             <p>I am eager to continue growing in the field of computer science, and I am always open to learning more and connecting with others in the industry!</p>
-        </section>
+            <div class="resize-handle"></div>
+        </div>
 
-        <section id="skills">
-            <h2>My Skills</h2>
-            <div class="skills-container">
-                <div class="skill-card">Python</div>
-                <div class="skill-card">Java</div>
-                <div class="skill-card">C</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">HTML</div>
-                <div class="skill-card">CSS</div>
-                <div class="skill-card">Machine Learning</div>
-                <div class="skill-card">Flask</div>
-                <div class="skill-card">Data Analysis</div>
-                <div class="skill-card">SQL</div>
-                <div class="skill-card">Git</div>
-                <div class="skill-card">Bash</div>
-                <div class="skill-card">Presenting</div>
-                <div class="skill-card">Problem Solving</div>
-                <div class="skill-card">Math</div>
-            </div>
-        </section>
+        <div class="draggable" id="draggable3">
+            <div class="draggableheader">My Skills</div>
+                <div class="skills-container">
+                    <div class="skill-card">Python</div>
+                    <div class="skill-card">Java</div>
+                    <div class="skill-card">C</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">HTML</div>
+                    <div class="skill-card">CSS</div>
+                    <div class="skill-card">Machine Learning</div>
+                    <div class="skill-card">Flask</div>
+                    <div class="skill-card">Data Analysis</div>
+                    <div class="skill-card">SQL</div>
+                    <div class="skill-card">Git</div>
+                    <div class="skill-card">Bash</div>
+                    <div class="skill-card">Presenting</div>
+                    <div class="skill-card">Problem Solving</div>
+                    <div class="skill-card">Math</div>
+                </div>
+            <div class="resize-handle"></div>
+        </div>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p id="fun-fact"></p>
-            <a href="mailto:josefwolf591@gmail.com" class="email-link">Email Me</a> or visit my <a href="contact.html" class="email-link">Contact</a> page to get in touch!
-        </section>
+        <div class="draggable" id="draggable4">
+            <div class="draggableheader">Contact Me</div>
+            <h5><a href="mailto:josefwolf591@gmail.com" class="email-link">Email Me</a> or visit my <a href="contact.html" class="email-link">Contact</a> page to get in touch!</h5>
+        </div>
     </main>
 
 
@@ -94,6 +100,7 @@
         </div>
     </footer>
 
+    <script src="static/js/draggable.js"></script>
     <script src="static/js/about.js"></script>
 </body>
 </html>
