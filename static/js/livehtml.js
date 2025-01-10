@@ -10,6 +10,8 @@ const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
 // Function to update the live preview
 function updatePreview() {
   const code = editor.getValue();  // Get the code from CodeMirror editor
+  const sanitizedCode = DOMPurify.sanitize(code);
+
   const previewFrame = document.getElementById('preview-frame');
 
   // Clear previous preview content
@@ -20,7 +22,7 @@ function updatePreview() {
   try {
       // Inject HTML, CSS, and JavaScript into the iframe for live preview
       previewDoc.open();
-      previewDoc.write(code);  // Write HTML, CSS, and JS into the iframe
+      previewDoc.write(sanitizedCode);  // Write HTML, CSS, and JS into the iframe
       previewDoc.close();
   } catch (e) {
       // Show error if any
