@@ -17,6 +17,14 @@
     display: flex;
 }
 
+#contact-page a {
+    color: lightblue;
+}
+
+#contact-page a:hover {
+    color:rgb(83, 184, 218);
+}
+
 @media (max-width: 1000px) {
     #contact-page {
         display: block;
