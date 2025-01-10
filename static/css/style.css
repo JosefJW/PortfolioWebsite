@@ -196,9 +196,13 @@ main {
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
     .footer-sections {
         word-spacing: 5vw;
+    }
+
+    #skip {
+        top: 0 !important;
     }
 }
 

@@ -1,31 +1,52 @@
 const code_container = document.getElementById("code-container");
-code_container.innerHTML = "|";
+code_container.innerHTML = `|`;
+let timeoutIds = []; // Array to store setTimeout IDs
+
+code_container.addEventListener("dblclick", function() {
+    cancelTimeouts();
+});
+
 
 function type_text(text, wait) {
     let text_chars = 0;
-    console.log(wait);
-    setTimeout(function() {
-        code_container.innerHTML = "|";
-    }, text_chars*100+wait);
+    wait += 3000;
+
+    // Reset the container and store timeout ID
+    const resetId = setTimeout(function () {
+        code_container.innerHTML = `|`;
+    }, text_chars * 100 + wait);
+    timeoutIds.push(resetId);
+
     for (let word of text.split(" ")) {
         for (let i = 0; i < word.length; i++) {
-            setTimeout(function() {
+            const id = setTimeout(function () {
                 code_container.innerHTML = code_container.innerHTML.slice(0, -1);
                 code_container.innerHTML += word.charAt(i);
                 color_text();
                 code_container.innerHTML += "|";
-            }, text_chars*100+wait);
+            }, text_chars * 100 + wait);
+            timeoutIds.push(id);
             text_chars++;
         }
-        setTimeout(function() {
+
+        const spaceId = setTimeout(function () {
             code_container.innerHTML = code_container.innerHTML.slice(0, -1);
             code_container.innerHTML += " ";
             color_text();
             code_container.innerHTML += "|";
-        }, text_chars*100+wait);
+        }, text_chars * 100 + wait);
+        timeoutIds.push(spaceId);
         text_chars++;
     }
     color_text();
+    console.log(timeoutIds);
+}
+
+// Function to cancel all setTimeouts
+function cancelTimeouts() {
+    timeoutIds.forEach(id => clearTimeout(id));
+    timeoutIds = []; // Clear the array after canceling
+    code_container.innerHTML = text_options_html[0];
 }
 
 function color_text() {
@@ -68,7 +89,7 @@ function color_text() {
 
     re = /[^>](self)/g
     changes = changes.replaceAll(re, (match, captureGroup1) => {
-        return `\t<span style="color:rgb(248, 197, 209)">${captureGroup1}</span>`;
+        return `<span style="color:rgb(248, 197, 209)">${captureGroup1}</span>`;
     })
 
     re = /[^>](import)/g
@@ -238,26 +259,53 @@ text_options = [
     `\timport  time
     
     \t class  Me():
-    \t\t def __init__():
-    \t\t\tself.name = "Josef Wolf"
-    \t\t\tself.education = "2nd Year Undergrad"
-    \t\t\tself.skills = [ "Python", "Java", "C", "JavaScript", "HTML", "CSS", "Machine Learning", "Flask", "Data Analysis and Presentation" ]
-    \t\t\tself.contact = [ "josefwolf591@gmail.com", "https://www.linkedin.com/in/josef-j-wolf/", "https://github.com/JosefJW" ]
+    \t\t def __init__(  self ):
+    \t\t\t self.name = "Josef Wolf"
+    \t\t\t self.education = "2nd Year Undergrad"
+    \t\t\t self.skills = [ "Python", "Java", "C", "JavaScript", "HTML", "CSS", "Machine Learning", "Flask", "Data Analysis and Presentation" ]
+    \t\t\t self.contact = [ "josefwolf591@gmail.com", "https://www.linkedin.com/in/josef-j-wolf/", "https://github.com/JosefJW" ]
     
-    \t\t def analyze_data(data):
+    \t\t def analyze_data(  self, data ):
     \t\t\tprint( "On it!" )
     \t\t\t time.sleep(some_time)
     \t\t\treturn analyzed_data
 
-    \t\t def code_feature(feature):
+    \t\t def code_feature(  self, feature ):
     \t\t\tprint( "Right away!" )
     \t\t\t time.sleep(some_time)
     \t\t\treturn feature_report
 
-    \t\t def debug_code(code):
+    \t\t def debug_code(  self, code ):
     \t\t\tprint( "Do I have to?" )
     \t\t\t time.sleep(some_time)
     \t\t\treturn debugged_code
+    `
+]
+
+text_options_html = [
+    `\t<span style="color:rgb(179, 78, 140)">import</span> <span style="color: rgb(248, 197, 209)">time</span>
+    
+    \t<span style="color: skyblue">class</span>  <span style="color: rgb(248, 197, 209)">Me</span>():
+    \t\t<span style="color: skyblue">def</span> <span style="color: #FFEE8C">__init__</span>(<span style="color:rgb(248, 197, 209)">self</span>):
+    \t\t\t<span style="color:rgb(248, 197, 209)">self</span>.name = <span style="color: #CCE2CB">"Josef Wolf"</span>
+    \t\t\t<span style="color:rgb(248, 197, 209)">self</span>.education = <span style="color: #CCE2CB">"2nd Year Undergrad"</span>
+    \t\t\t<span style="color:rgb(248, 197, 209)">self</span>.skills = [ <span style="color: #CCE2CB">"Python"</span>, <span style="color: #CCE2CB">"Java"</span>, <span style="color: #CCE2CB">"C"</span>, <span style="color: #CCE2CB">"JavaScript"</span>, <span style="color: #CCE2CB">"HTML"</span>, <span style="color: #CCE2CB">"CSS"</span>, <span style="color: #CCE2CB">"Machine Learning"</span>, <span style="color: #CCE2CB">"Flask"</span>, <span style="color: #CCE2CB">"Data Analysis and Presentation"</span> ]
+    \t\t\t<span style="color:rgb(248, 197, 209)">self</span>.contact = [ "<span style="color: #55CBCD"><a href="mailto:josefwolf591@gmail.com" style="color: #ABDEE6" target="_blank">josefwolf591@gmail.com</a></span>", "<a href="https://www.linkedin.com/in/josef-j-wolf" style="color: #ABDEE6" target="_blank">https://www.linkedin.com/in/josef-j-wolf/</a>", "<a href="https://github.com/JosefJW" style="color: #ABDEE6" target="_blank">https://github.com/JosefJW</a>" ]
+    
+    \t\t<span style="color: skyblue">def</span> <span style="color: #FFEE8C">analyze_data</span>( <span style="color:rgb(248, 197, 209)">self</span>, data ):
+    \t\t\tprint( <span style="color: #CCE2CB">"On it!"</span> )
+    \t\t\t<span style="color: rgb(248, 197, 209)">time</span>.sleep(some_time)
+    \t\t\t<span style="color:rgb(255, 106, 106)">return</span> analyzed_data
+
+    \t\t<span style="color: skyblue">def</span> <span style="color: #FFEE8C">code_feature</span>( <span style="color:rgb(248, 197, 209)">self</span>, feature ):
+    \t\t\tprint( <span style="color: #CCE2CB">"Right away!"</span> )
+    \t\t\t<span style="color: rgb(248, 197, 209)">time</span>.sleep(some_time)
+    \t\t\t<span style="color:rgb(255, 106, 106)">return</span> feature_report
+
+    \t\t<span style="color: skyblue">def</span> <span style="color: #FFEE8C">debug_code</span>( <span style="color:rgb(248, 197, 209)">self</span>, code ):
+    \t\t\tprint( <span style="color: #CCE2CB">"Do I have to?"</span> )
+    \t\t\t<span style="color: rgb(248, 197, 209)">time</span>.sleep(some_time)
+    \t\t\t<span style="color:rgb(255, 106, 106)">return</span> debugged_code
     `
 ]
 
@@ -268,7 +316,7 @@ for (let i = 0; i < text_options.length; i++) {
     for (let j = 0; j < i; j++) {
         wait += text_options[j].length
     }
-    wait = wait*60+i*5000+3000
+    wait = wait*60+i*5000
     console.log(wait);
 
     setTimeout(function() {
