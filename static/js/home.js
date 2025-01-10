@@ -9,7 +9,7 @@ code_container.addEventListener("dblclick", function() {
 
 function type_text(text, wait) {
     let text_chars = 0;
-    wait += 3000;
+    wait += 3500;
 
     // Reset the container and store timeout ID
     const resetId = setTimeout(function () {
