@@ -73,3 +73,18 @@ a:hover {
 .simple {
   color: rgb(31, 66, 8);
 }
+
+main {
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
