@@ -10,26 +10,28 @@ const editor = CodeMirror.fromTextArea(document.getElementById('code-editor'), {
 // Function to update the live preview
 function updatePreview() {
   const code = editor.getValue();  // Get the code from CodeMirror editor
-  const sanitizedCode = DOMPurify.sanitize(code);
+  const sanitizedCode = DOMPurify.sanitize(code);  // Sanitize the code
 
   const previewFrame = document.getElementById('preview-frame');
-
-  // Clear previous preview content
   const previewDoc = previewFrame.contentWindow.document;
+
+  // Reset the iframe content
   previewDoc.open();
-  previewDoc.close();
+  previewDoc.write("");  // Clear any previous content (blank)
+  previewDoc.close();    // Ensure the document is fully closed
 
   try {
-      // Inject HTML, CSS, and JavaScript into the iframe for live preview
-      previewDoc.open();
-      previewDoc.write(sanitizedCode);  // Write HTML, CSS, and JS into the iframe
-      previewDoc.close();
+    // Inject the sanitized HTML into the iframe
+    previewDoc.open();
+    previewDoc.write(sanitizedCode);  // Write sanitized HTML into the iframe
+    previewDoc.close();              // Close the document to apply changes
   } catch (e) {
-      // Show error if any
-      previewDoc.body.innerHTML = `Error: ${e.message}`;
+    // If there's an error, show it inside the iframe
+    previewDoc.body.innerHTML = `Error: ${e.message}`;
   }
 }
 
 // Update preview on every input change in the editor
 editor.on('change', updatePreview);
-updatePreview();
+updatePreview();  // Initial update on load
+
