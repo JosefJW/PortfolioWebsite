@@ -285,7 +285,7 @@ text_options = [
 text_options_html = [
     `\t<span style="color:rgb(179, 78, 140)">import</span> <span style="color: rgb(248, 197, 209)">time</span>
     
-    \t<span style="color: skyblue">class</span>  <span style="color: rgb(248, 197, 209)">Me</span>():
+    \t<span style="color: skyblue">class</span> <span style="color: rgb(248, 197, 209)">Me</span>():
     \t\t<span style="color: skyblue">def</span> <span style="color: #FFEE8C">__init__</span>(<span style="color:rgb(248, 197, 209)">self</span>):
     \t\t\t<span style="color:rgb(248, 197, 209)">self</span>.name = <span style="color: #CCE2CB">"Josef Wolf"</span>
     \t\t\t<span style="color:rgb(248, 197, 209)">self</span>.education = <span style="color: #CCE2CB">"2nd Year Undergrad"</span>
