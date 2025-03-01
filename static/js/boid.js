@@ -187,8 +187,8 @@ class boid {
         this.acceleration.y += cohesion.y;
         this.acceleration.x += separation.x;
         this.acceleration.y += separation.y;
-        this.acceleration.x += edge.x;
-        this.acceleration.y += edge.y;
+        //this.acceleration.x += edge.x;
+        //this.acceleration.y += edge.y;
         this.acceleration.x += scram.x;
         this.acceleration.y += scram.y;
         this.acceleration.x += cursor.x;
@@ -228,9 +228,11 @@ class boid {
         let velocitySum = 0;
         let count = 0;
         for (const boid of boids) {
-            velocitySum += boid.velocity.x;
-            velocitySum += boid.velocity.y;
-            count++;
+            if (boid) {
+                velocitySum += boid.velocity.x;
+                velocitySum += boid.velocity.y;
+                count++;
+            }
         }
         let average = {
             x: velocitySum / count,

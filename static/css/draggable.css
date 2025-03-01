@@ -10,8 +10,8 @@
         width: 400px;
         min-height: 200px;
         height: 200px;
-        top: 10vh;
-        left: 15vw;
+        top: 13vh;
+        left: 12vw;
         opacity: 1;
         overflow: hidden;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -86,7 +86,7 @@
         width: 685px;
         min-height: 200px;
         height: 1065px;
-        top: 0;
+        top: 100px;
         left: calc(50% - 685px / 2);
         opacity: 1;
         overflow: hidden;
@@ -106,8 +106,8 @@
         height: 200px;
         min-width: 300px;
         width: 400px;
-        top: 10vh;
-        left: 15vw;
+        top: 13vh;
+        left: 12vw;
         opacity: 1;
         }
     }
@@ -171,14 +171,14 @@
         height: 0;
         min-width: 0;
         width: 0;
-        top: calc(100vh - 30px);
+        top: calc(100vh - 60px);
         opacity: 0;
         }
         90% {
         height: 1065px;
         min-width: 300px;
         width: 685px;
-        top: 0;
+        top: 100px;
         left: calc(50% - 685px / 2);
         opacity: 1;
         }
@@ -210,6 +210,10 @@
         right: 0;
         cursor: se-resize; /* Cursor for bottom-right resize */
     }
+}
+
+.draggable {
+    z-index: 10;
 }
 
 

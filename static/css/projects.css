@@ -39,7 +39,8 @@ main {
   padding: 0 15px;
   height: 0; /* Start hidden */
   overflow: hidden; /* Prevent content from spilling out */
-  background: #222222;
+  /*background: #222222;*/
+  background-color: black;
   transition: height 0.3s ease, padding 0.3s ease;
   color: rgb(247, 238, 221);
 }
