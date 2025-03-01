@@ -49,12 +49,14 @@ body {
         filter: blur(0);
     }
 }
+
 .menu {
     position: absolute;
     top: 55%;
     left: 50%;
-    transform: translate(-50%, 20px);
+    transform: translate(-50%, -50%);
     display: flex;
+    align-items: center;
     gap: 20px;
     font-size: 20px;
     font-weight: bold;
@@ -72,10 +74,7 @@ body {
 
 @media (max-width: 768px) {
     .menu {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
         padding: 10px;
     }
     .menu a {
@@ -86,9 +85,8 @@ body {
 
 @media (max-width: 480px) {
     .menu {
+        flex-direction: column;
         padding: 5px;
-        align-items: center;
-        text-align: center;
     }
     .menu a {
         font-size: 16px;
@@ -97,11 +95,11 @@ body {
 }
 
 
+
 .menu a:hover {
     color: cyan;
 }
 
-/* Animations */
 @keyframes fadeIn {
     0% {
         opacity: 0;
