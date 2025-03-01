@@ -65,9 +65,9 @@ body {
 .menu a {
     color: white;
     text-decoration: none;
-    padding: clamp(0px, 10vw, 4px) 10px;
+    padding: clamp(0px, 2vw, 4px) 10px;
     transition: color 0.3s ease;
-    font-size: clamp(5px, 3vmin, 20px);
+    font-size: clamp(1px, 3vmin, 20px);
 }
 
 .menu a:hover {
