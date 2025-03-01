@@ -75,6 +75,7 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
         padding: 10px;
     }
     .menu a {
@@ -87,6 +88,7 @@ body {
     .menu {
         padding: 5px;
         align-items: center;
+        text-align: center;
     }
     .menu a {
         font-size: 16px;
