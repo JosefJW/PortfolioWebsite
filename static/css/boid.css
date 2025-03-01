@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+canvas {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    font-size: clamp(50px, 10vmin, 100px);
+    font-weight: bold;
+    color: white;
+    opacity: 0;
+    /*text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);*/
+    animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.5);
+        filter: blur(10px);
+    }
+    50% {
+        opacity: 0.5;
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        filter: blur(0);
+    }
+}
+.menu {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: cyan;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+        filter: blur(10px);
+    }
+    50% {
+        opacity: 0.5;
+        filter: blur(5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+        filter: blur(0);
+    }
+}
+
+.menu.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+.overlay-container {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 5px 5px 10px black, -5px -5px 10px black;
+    display: inline-block; /* Allows container to scale based on its content */
+    padding: 20px; /* Adjust as necessary */
+    background: rgba(0, 0, 0, 0.5); /* Optional, just for better visibility */
+}
+
+
+

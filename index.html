@@ -3,83 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="static/css/style.css"/>
+    <title>Josef Wolf</title>
+    <link rel="stylesheet" href="static/css/boid.css">
 </head>
 <body>
-    <header>
-        <div style="display: flex; position: relative;">
-            <h1 style="position: relative; left: 10px;">Josef Wolf</h1>
-            <p id="skip" style="position: absolute; right: 0; top: 35px;">Double click to skip animation.</p>
-        </div>        
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="education.html">Education</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <div id="code-container-off">
-            <div id="code-container">
-                <h5 style="position: fixed; width: 230px; left: 100vw; top: 0vh; transform: translateX(-100%) translateY(50px);">Double click to skip animation.</h5>
-                import  time
-        
-                class  Me():
-                    def __init__():
-                        self.name = "Josef Wolf"
-                        self.education = "2nd Year Undergrad"
-                        self.skills = [ "Python", "Java", "C", "JavaScript", "HTML", "CSS", "Machine Learning", "Flask", "Data Analysis and Presentation" ]
-                        self.contact = [ "josefwolf591@gmail.com", "https://www.linkedin.com/in/josef-j-wolf/", "https://github.com/JosefJW" ]
-        
-                    def analyze_data(data):
-                        print( "On it!" )
-                        time.sleep(some_time)
-                        return analyzed_data
-
-                    def code_feature(feature):
-                        print( "Right away!" )
-                        time.sleep(some_time)
-                        return feature_report
-
-                    def debug_code(code):
-                        print( "Do I have to?" )
-                        time.sleep(some_time)
-                        return debugged_code
-            </div>
-        </div>
-    </main>
-    <footer style="margin-left: -10vw; margin-right: -10vw;">
-        <div class="footer-container">
-            <!-- Footer Sections Links -->
-            <div class="footer-sections">
+    <div class="container">
+        <canvas id="drawingCanvas"></canvas>
+        <div class="overlay-container" id="overlay-container">
+            <div class="overlay-text">Josef Wolf</div>
+            <nav class="menu">
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="projects.html">Projects</a>
                 <a href="education.html">Education</a>
                 <a href="contact.html">Contact</a>
-            </div>
-            
-            <!-- Contact Information -->
-            <div class="contact-info">
-                <a href="https://www.linkedin.com/in/josef-j-wolf" target="_blank">LinkedIn</a>
-                <a href="https://github.com/JosefJW" target="_blank">Github</a>
-            </div>
-
-            <!--<a id="inspire" href="inspire.html">Free Inspiration!</a>-->
-            
-            <!-- Name -->
-            <div class="name">
-                <p>Josef Wolf</p>
-            </div>
-            
-            <!-- Thank You Message -->
-            <div class="thank-you">
-                <p>Thank you for visiting my website!</p>
-            </div>
+            </nav>
         </div>
-    </footer>
-    <script src="static/js/home.js"></script>
+    </div>
 </body>
+<script src="static/js/boid.js"></script>
+<script>
+    // Show menu after overlay text fades in
+    setTimeout(() => {
+        document.querySelector('.menu').classList.add('show');
+    }, 2000); // Delay to match the fade-in animation
+</script>
 </html>
