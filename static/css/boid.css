@@ -57,6 +57,7 @@ body {
     display: flex;
     gap: 20px;
     font-size: 20px;
+    align-items: center;
     font-weight: bold;
     opacity: 0;
     transition: all 1s ease-out;
@@ -65,6 +66,7 @@ body {
 .menu a {
     color: white;
     text-decoration: none;
+    padding: 5px 10px;
     transition: color 0.3s ease;
     font-size: clamp(1px, 3vmin, 20px);
 }
