@@ -65,10 +65,32 @@ body {
 .menu a {
     color: white;
     text-decoration: none;
-    /*padding: clamp(0px, 2vw, 4px) 10px;*/
     transition: color 0.3s ease;
     font-size: clamp(1px, 3vmin, 20px);
 }
+
+@media (max-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .menu a {
+        font-size: clamp(14px, 5vw, 18px);
+        padding: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        padding: 5px;
+    }
+    .menu a {
+        font-size: 16px;
+        padding: 8px 0;
+    }
+}
+
 
 .menu a:hover {
     color: cyan;
