@@ -6,11 +6,30 @@
     <title>About</title>
     <link rel="stylesheet" href="static/css/draggable.css">
     <link rel="stylesheet" href="static/css/style.css">
+    <style>
+        /* Canvas should cover the whole screen */
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevents scrolling */
+        }
+
+        canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1; /* Places it behind everything */
+        }
+    </style>
 </head>
 <body>
-    <header>
+    <canvas id="bgCanvas"></canvas> <!-- Background Canvas -->
+
+    <header style="background-color: transparent;">
         <h1 style="position: relative; left: 10px;">Josef Wolf</h1>
-        <nav>
+        <nav style="background-color: transparent;">
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
@@ -28,8 +47,8 @@
 
         <div class="draggable" id="draggable1">
             <div class="draggableheader">Me</div>
-                <h2>Hey, I'm Josef Wolf!</h2>
-                <p></p>
+            <h2>Hey, I'm Josef Wolf!</h2>
+            <p></p>
         </div>
 
         <div class="draggable" id="draggable2">
@@ -70,5 +89,7 @@
 
     <script src="static/js/draggable.js"></script>
     <script src="static/js/about.js"></script>
+    <script src="static/js/line.js"></script>
+    <script src="static/js/line_sim.js"></script>
 </body>
 </html>

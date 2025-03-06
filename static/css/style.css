@@ -25,6 +25,10 @@ header {
     animation: slideIn 1s ease-in-out, fadeIn 1s ease-in-out;
 }
 
+header * {
+    text-shadow: 50px 50px 100px black, -50px -50px 100px black;
+}
+
 @keyframes slideIn {
     0% {
         transform: translateX(-100%); /* Start off-screen to the left */
