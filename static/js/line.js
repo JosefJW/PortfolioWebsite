@@ -6,7 +6,7 @@ class Line {
         this.vely = dy;
         this.accx = 0;
         this.accy = 9.8;
-        this.adjustmentMulp = 0.1;
+        this.adjustmentMulp = 0.01;
         this.hue = Math.random() * 360;
     }
 
