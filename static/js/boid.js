@@ -5,7 +5,7 @@ const text_rect = text.getBoundingClientRect();
 
 const draw_trails = false;
 
-let boid_count = 100;
+let boid_count = 1;
 
 // window.addEventListener("mousedown", function (event) {
 //     if ((event.clientX < text_rect.left || event.clientX > text_rect.right) && 
